@@ -1,0 +1,86 @@
+.heading {
+  font-size: 28px;
+  color: black;
+}
+.formEle {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+  box-shadow: 0px 0px 20px #000;
+  border: 2px #000;
+  border-radius: 12px;
+  margin: 20px;
+  padding: 20px;
+  height: 350px;
+  width: 320px;
+}
+label {
+  font-size: 12px;
+  color: #000;
+  margin-bottom: 15px;
+}
+input {
+  width: 200px;
+  margin-bottom: 15px;
+}
+
+.bg-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.listOfParticipant {
+  display: flex;
+  flex-direction: row;
+  font-size: 10px;
+  color: rgb(65, 53, 53);
+  font-weight: none;
+  margin: 5px;
+  padding: 4px;
+  width: 360px;
+  background-color: #ffffff;
+}
+h3 {
+  justify-content: space-between;
+  margin-right: 130px;
+}
+.names {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+}
+p {
+  font-size: 10px;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  width: 80%;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0px 0px 10px #000;
+  margin-bottom: 10px;
+  background-color: rgb(223, 233, 228);
+}
+p {
+  margin-right: 130px;
+}
+
+.addbtn {
+  background-color: #000;
+  color: #fff;
+}
+.racebtn {
+  background-color: rgb(240, 69, 69);
+  color: #fff;
+  border-left: 0px;
+  padding: 5px;
+  border-radius: 12px;
+  margin-left: 300px;
+  border: 2px grey solid;
+  box-shadow: 0px 0px 10px rgb(179, 171, 171);
+}
