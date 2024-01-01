@@ -23,14 +23,16 @@ class PlayGround extends Component {
     console.log(data)
 
     const timer = Math.round(setTimeout(this.tick, 1000))
-    const hours = Math.floor(timer / 360000)
+
+    const minutes = Math.floor(timer / 360000)
 
     // Minutes calculation
-    const minutes = Math.floor((timer % 360000) / 6000)
+    const seconds = Math.floor((timer % 360000) / 6000)
 
     // Seconds calculation
-    const seconds = Math.floor((timer % 6000) / 100)
-    const btn = minutes === 60 ? 'triggerButton' : 'triggerButtonBlock'
+    const miliseconds = Math.floor((timer % 6000) / 100)
+    const btn = minutes >= 1 ? 'triggerButton' : 'triggerButtonBlock'
+    console.log(btn)
 
     return (
       <div className="container">
@@ -50,14 +52,14 @@ class PlayGround extends Component {
         ))}
 
         <h1 className="timerCon">
-          timer: {hours} : {minutes} :{seconds}
+          timer: {minutes} : {seconds} :{miliseconds}
         </h1>
 
         <div className="popup-container">
           <Popup
             modal
             trigger={
-              <button type="button" className={btn}>
+              <button type="button" className={btn} onClick={this.stopTime}>
                 Finished
               </button>
             }
