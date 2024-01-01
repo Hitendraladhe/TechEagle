@@ -22,10 +22,6 @@ class PlayGround extends Component {
     const {name, speed} = data
     console.log(data)
 
-    const overlayStyles = {
-      backgroundColor: 'white',
-    }
-
     const timer = Math.round(setTimeout(this.tick, 1000))
     const hours = Math.floor(timer / 360000)
 
@@ -34,6 +30,7 @@ class PlayGround extends Component {
 
     // Seconds calculation
     const seconds = Math.floor((timer % 6000) / 100)
+    const btn = minutes === 60 ? 'triggerButton' : 'triggerButtonBlock'
 
     return (
       <div className="container">
@@ -41,7 +38,10 @@ class PlayGround extends Component {
           <div className="first">
             <button
               type="button"
-              style={{marginLeft: `${each.speed + minutes * 6}px`}}
+              style={
+                ({marginLeft: `${each.speed + minutes * 11}px`},
+                {backgroundColor: `${each.color}`})
+              }
               className="btn1"
             >
               {each.name}
@@ -57,11 +57,10 @@ class PlayGround extends Component {
           <Popup
             modal
             trigger={
-              <button type="button" className="trigger-button">
+              <button type="button" className={btn}>
                 Finished
               </button>
             }
-            overlayStyle={overlayStyles}
           >
             <div className="popupName">
               <p>Name</p>
